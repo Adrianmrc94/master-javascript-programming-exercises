@@ -1,6 +1,6 @@
 function getAllLetters(str) {
     // your code here
-    
+    return str.split('');  // split convierte el string en un array de caracteres
 }
 
 let output = getAllLetters('Radagast');

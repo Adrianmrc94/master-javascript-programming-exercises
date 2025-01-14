@@ -1,6 +1,6 @@
 function removeFromFrontOfNew(arr) {
     // your code here
-    
+    return arr.slice(1);  // slice obtiene una copia del array sin el primer elemento
 }
 
 let arr = [1, 2, 3];

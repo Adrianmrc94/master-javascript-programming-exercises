@@ -1,6 +1,6 @@
 function addToFrontOfNew(arr, element) {
     // your code here
-    
+    return [element].concat(arr);
 }
 
 let input = [1, 2];

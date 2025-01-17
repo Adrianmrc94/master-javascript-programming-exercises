@@ -19,7 +19,21 @@ let currentInventory = [
 
 function renderInventory(shoeList) {
     // your code here
+        // Creamos un array vacío donde almacenaremos el resultado
+        let result = [];
     
+        // Recorremos el inventario de diseñadores
+        for (let designer of shoeList) {
+            // Filtramos los zapatos de la marca que contienen la palabra "black"
+            let blackShoes = designer.shoes.filter(shoe => shoe.name.includes("black"));
+            
+            // Agregamos cada zapato filtrado en el formato correcto
+            for (let shoe of blackShoes) {
+                result.push([designer.name, shoe.name, shoe.price]);
+            }
+        }
+    
+        return result;
 }
 
 console.log(renderInventory(currentInventory));

@@ -21,7 +21,19 @@ function renderInventory(inventory) {
     // your code here
     // hint: before you just dive into coding...
     // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
-    
+  // Creamos una matriz que contendrá los zapatos de cada diseñador en un array
+  let allShoes = [];
+  
+  // Recorremos cada diseñador del inventario
+  for (let designer of inventory) {
+    // Recorremos los zapatos del diseñador
+    for (let shoe of designer.shoes) {
+      // Incluimos el nombre del diseñador junto con el nombre y precio de cada zapato
+      allShoes.push([designer.name, shoe.name, shoe.price]);
+    }
+  }
+  
+  return allShoes;
 }
 
 console.log(renderInventory(currentInventory))
